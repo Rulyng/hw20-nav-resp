@@ -22,12 +22,27 @@ h1 {
 
 .wrapper {
   display: flex;
-  padding: 20px;
   gap: 20px;
+
+}
+
+/* меню поверх контенту */
+.content__container{
+  position: relative;
+  padding-left: 100px;
 }
 
 .aside {
-  padding: 30px 0;
+  position: fixed;
+  top: 0;
+  z-index: 1;
+  height: 100vh;
+overflow: scroll;
+box-shadow: 10px 5px 15px gray;
+}
+
+.aside::-webkit-scrollbar {
+  display: none;
 }
 
 .menu-text {
@@ -68,13 +83,15 @@ h1 {
 
 .nav-menu:hover .menu-text {
   display: block;
-}
+  }
 
 .nav-menu:hover .menu-item {
   width: 220px;
-  display: flex;
+    display: flex;
   justify-content: flex-start;
   align-items: center;
+  transition: width 0.7s;
+
 }
 
 .menu-item:hover {
@@ -108,26 +125,3 @@ h1 {
   display: block;
 }
 
-/* .icon-line {
-  background-image: url(img/line.png);
-  height: 4px;
-  width: 40px;
-}
-
-.nav-menu:hover .icon-line {
-  background-image: url(img/Apps.png);
-  background-repeat: no-repeat;
-  width: 45px;
-  height: 20px;
-}
-.icone-line2 {
-  background-image: url(img/line.png);
-  height: 4px;
-  width: 40px;
-}
-.nav-menu:hover .icon-line2 {
-  background-image: url(img/Titile.png);
-  background-repeat: no-repeat;
-  width: 172px;
-  height: 25px;
-} */
